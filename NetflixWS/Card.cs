@@ -84,6 +84,11 @@ namespace NetflixWS
             return true;
         }
 
+        public static void UpdateName(string fname, string lname) 
+        {
+            CreditCardDAL.UpdateName(fname,lname);
+        }
+
         public string CardNumber { get => cardNumber; set => cardNumber = value; }
         public int Owner { get => owner; set => owner = value; }
         public int CVV { get => cvv; set => cvv = value; }

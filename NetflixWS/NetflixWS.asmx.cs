@@ -22,5 +22,33 @@ namespace NetflixWS
         {
             return Card.DoTransaction(c, t);
         }
+
+        [WebMethod]
+        public List<Transaction> Income (string payee)
+        {
+            return Transaction.TransactionPayee(payee);
+        }
+
+        [WebMethod]
+        public Transaction UserLatesPay(string payee,string card)
+        {
+            return Transaction.SpesifycPay(payee,card);
+        }
+
+        [WebMethod]
+        public Card UserPayment(string card)
+        {
+            return new Card(card);
+        }
+
+
+
+        [WebMethod]
+        public void UpdateCardName(string fname,string lname)
+        {
+            Card.UpdateName(fname,lname);
+        }
+
+
     }
 }

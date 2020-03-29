@@ -56,5 +56,14 @@ namespace NetflixWSDAL
             OleDbHelper.DoQuery("UPDATE " + TABEL + " SET " + filed8 + "=" + NewAmount.ToString() + " WHERE " + filed1 + "=" + card);
 
         }
+
+
+        public static void UpdateName(string fname, string lname)
+        {
+            fname = stringbuilder(fname);
+            lname = stringbuilder(lname);
+            OleDbHelper.DoQuery("UPDATE " + TABEL + " SET " + filed6 + "=" + fname + ", " +filed7 + "=" +lname+" WHERE " + filed1 + "=" + card);
+
+        }
     }
 }
