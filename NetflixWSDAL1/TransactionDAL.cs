@@ -34,13 +34,7 @@ namespace NetflixWSDAL
             return OleDbHelper.Fill("select * from " + TABEL + " WHERE " + filed2 + " = " + card, "TransactionsByCardTbl");
         }
 
-        public static DataSet GetTransactionByPayee(string Payee)
-        {
-            Payee = stringbuilder(Payee);
-            return OleDbHelper.Fill("select * from " + TABEL + " WHERE " + filed2 + " = " + Payee, "TransactionsByPayeeTbl");
-        }
-
-        public static void Insert(string card, int amount,string payee)
+            public static void Insert(string card, int amount,string payee)
         {
             payee = stringbuilder(payee);
             card = stringbuilder(card);

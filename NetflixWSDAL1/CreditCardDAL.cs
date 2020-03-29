@@ -49,12 +49,5 @@ namespace NetflixWSDAL
 
 
         }
-
-        public static void UpdateAmount(string card, int NewAmount)
-        {
-            card = stringbuilder(card);
-            OleDbHelper.DoQuery("UPDATE " + TABEL + " SET " + filed8 + "=" + NewAmount.ToString() + " WHERE " + filed1 + "=" + card);
-
-        }
     }
 }

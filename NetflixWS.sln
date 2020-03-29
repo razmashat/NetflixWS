@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetflixWSDAL", "NetflixWSDAL\NetflixWSDAL.csproj", "{B776FA63-284C-4A96-8598-DFD1D03F5C26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetflixWS", "NetflixWS\NetflixWS.csproj", "{15E9011B-E533-4715-9070-D37D0653A56D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetflixWSDAL", "NetflixWSDAL\NetflixWSDAL.csproj", "{1F486ED9-E2C4-4A59-A0A2-98F5256CBFFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B776FA63-284C-4A96-8598-DFD1D03F5C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B776FA63-284C-4A96-8598-DFD1D03F5C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B776FA63-284C-4A96-8598-DFD1D03F5C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B776FA63-284C-4A96-8598-DFD1D03F5C26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15E9011B-E533-4715-9070-D37D0653A56D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15E9011B-E533-4715-9070-D37D0653A56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15E9011B-E533-4715-9070-D37D0653A56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15E9011B-E533-4715-9070-D37D0653A56D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F486ED9-E2C4-4A59-A0A2-98F5256CBFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F486ED9-E2C4-4A59-A0A2-98F5256CBFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F486ED9-E2C4-4A59-A0A2-98F5256CBFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F486ED9-E2C4-4A59-A0A2-98F5256CBFFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
