@@ -27,7 +27,7 @@ namespace NetflixWS
         
         }
 
-
+        //21736281231 453 2 22
         public Card(string card) 
         {
 
@@ -40,7 +40,7 @@ namespace NetflixWS
                 this.expMonth = int.Parse(ds.Tables["CreditCardByCardTbl"].Rows[0]["ExpMonth"].ToString());
                 this.expYear = int.Parse(ds.Tables["CreditCardByCardTbl"].Rows[0]["ExpYear"].ToString());
                 this.FirstName = ds.Tables["CreditCardByCardTbl"].Rows[0]["FirstName"].ToString();
-                this.lastName = ds.Tables["CreditCardByCardTbl"].Rows[0]["LatName"].ToString();
+                this.lastName = ds.Tables["CreditCardByCardTbl"].Rows[0]["LastName"].ToString();
                 this.balance = int.Parse(ds.Tables["CreditCardByCardTbl"].Rows[0]["Balance"].ToString());
 
             }
@@ -65,12 +65,13 @@ namespace NetflixWS
             Card CompareCard = new Card(c.CardNumber);
             if (c.CardNumber != CompareCard.CardNumber || c.owner != CompareCard.owner || c.CVV != CompareCard.CVV || c.ExpMonth != CompareCard.ExpMonth || c.ExpYear != CompareCard.ExpYear || c.FirstName != CompareCard.FirstName || c.LastName != CompareCard.LastName)
                 return false;
+            c = CompareCard;
             return true;
             
         }
         public static bool CanDoTransation(Card c, Transaction t ) 
         {
-            if (!ValidateCard(c) || t.Amount > c.Balance)
+            if (!ValidateCard(c) || t.Amount > new Card(c.cardNumber).Balance)
                 return false;
             return true;    
         }
@@ -84,9 +85,9 @@ namespace NetflixWS
             return true;
         }
 
-        public static void UpdateName(string fname, string lname) 
+        public static void UpdateName(string fname, string lname,string card) 
         {
-            CreditCardDAL.UpdateName(fname,lname);
+            CreditCardDAL.UpdateName(fname,lname,card);
         }
 
         public string CardNumber { get => cardNumber; set => cardNumber = value; }

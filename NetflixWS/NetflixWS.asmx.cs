@@ -24,6 +24,12 @@ namespace NetflixWS
         }
 
         [WebMethod]
+        public bool CanPay(Card c, Transaction t)
+        {
+            return Card.CanDoTransation(c,t);
+        }
+
+        [WebMethod]
         public List<Transaction> Income (string payee)
         {
             return Transaction.TransactionPayee(payee);

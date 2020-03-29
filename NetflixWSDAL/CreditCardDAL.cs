@@ -45,7 +45,7 @@ namespace NetflixWSDAL
         {
 
             DataSet ds = GetCreditCardnByCardNumber(card);
-            return (ds.Tables["adminByIdTbl"].Rows.Count > 0);
+            return (ds.Tables["CreditCardByCardTbl"].Rows.Count > 0);
 
 
         }
@@ -58,7 +58,7 @@ namespace NetflixWSDAL
         }
 
 
-        public static void UpdateName(string fname, string lname)
+        public static void UpdateName(string fname, string lname, string card)
         {
             fname = stringbuilder(fname);
             lname = stringbuilder(lname);

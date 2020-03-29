@@ -37,7 +37,7 @@ namespace NetflixWSDAL
         public static DataSet GetTransactionByPayee(string Payee)
         {
             Payee = stringbuilder(Payee);
-            return OleDbHelper.Fill("select * from " + TABEL + " WHERE " + filed2 + " = " + Payee, "TransactionsByPayeeTbl");
+            return OleDbHelper.Fill("select * from " + TABEL + " WHERE " + filed4 + " = " + Payee, "TransactionsByPayeeTbl");
         }
 
         public static void Insert(string card, int amount,string payee)
