@@ -56,6 +56,16 @@ namespace NetflixWS
             return t;
         }
 
+        public static bool SpesifycPayExist(string payee, string card)
+        {
+     
+            DataSet ds = TransactionDAL.GetTransactionByCardNumber(card);
+            for (int i = 0; i < ds.Tables["TransactionsByCardTbl"].Rows.Count; i++)
+                if (ds.Tables["TransactionsByCardTbl"].Rows[i]["Payee"].ToString() == payee)
+                    return true;
+            return false;
+        }
+
         public int ID { get => id; set => id = value; }
         public string CardNumber { get => cardNumber; set => cardNumber = value; }
         public int Amount { get => amount; set => amount = value; }

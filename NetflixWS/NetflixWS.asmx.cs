@@ -44,9 +44,9 @@ namespace NetflixWS
 
 
         [WebMethod]
-        public void UpdateCardName(string fname,string lname)
+        public bool IsPaid(string payee,string card) 
         {
-            Card.UpdateName(fname,lname);
+            return Transaction.SpesifycPayExist(payee,card);
         }
 
 
